@@ -15,6 +15,7 @@ public class SimpleClock extends JFrame {
         SimpleDateFormat timeFormat;
         SimpleDateFormat dayFormat;
         SimpleDateFormat dateFormat;
+
         SimpleDateFormat timeFormatMilitary;
         SimpleDateFormat timeFormatGMT;
         Boolean isClickedOnce = false;
@@ -34,9 +35,11 @@ public class SimpleClock extends JFrame {
             this.setResizable(false);
     
             timeFormat = new SimpleDateFormat("hh:mm:ss a");
+
             timeFormatMilitary = new SimpleDateFormat("HH:mm:ss");
             timeFormatGMT = new SimpleDateFormat("HH:mm:ss z");
             timeFormatGMT.setTimeZone(TimeZone.getTimeZone("GMT"));
+
             dayFormat=new SimpleDateFormat("EEEE");
             dateFormat=new SimpleDateFormat("dd MMMMM, yyyy");
             timeLabel = new JLabel();
@@ -83,6 +86,7 @@ public class SimpleClock extends JFrame {
 
             this.add(gmtTime);
             this.add(militaryTime);
+
             this.add(timeLabel);
             this.add(dayLabel);
             this.add(dateLabel);
@@ -94,7 +98,6 @@ public class SimpleClock extends JFrame {
     
         public void setTimer() {
             while (true) {
-//                TimeZone gmtTime = TimeZone.getTimeZone("GMT");
 
                 time = timeFormat.format(Calendar.getInstance().getTime());
                 timeLabel.setText(time);
