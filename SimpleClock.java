@@ -47,6 +47,7 @@ public class SimpleClock extends JFrame implements Runnable {
             timeLabel.setBackground(Color.BLACK);
             timeLabel.setForeground(Color.WHITE);
             timeLabel.setOpaque(true);
+            timeLabel.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
             dayLabel=new JLabel();
             dayLabel.setFont(new Font("Ink Free",Font.BOLD,34));
     
