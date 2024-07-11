@@ -92,32 +92,9 @@ public class SimpleClock extends JFrame implements Runnable {
             this.setVisible(true);
 
             run();
-
-//            setTimer();
         }
-    
-//        public void setTimer() {
-//            while (true) {
-//
-//                time = timeFormat.format(Calendar.getInstance().getTime());
-//                timeLabel.setText(time);
-//
-//                day = dayFormat.format(Calendar.getInstance().getTime());
-//                dayLabel.setText(day);
-//
-//                date = dateFormat.format(Calendar.getInstance().getTime());
-//                dateLabel.setText(date);
-//
-//                try {
-//                    Thread.sleep(1000);
-//                } catch (Exception e) {
-//                    e.getStackTrace();
-//                }
-//            }
-//        }
 
         public static void main (String[] args) {
-//            new SimpleClock();
             SimpleClock clock = new SimpleClock();
             Thread thread = new Thread(clock);
             thread.start();
